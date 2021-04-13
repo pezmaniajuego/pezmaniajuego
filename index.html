@@ -128,7 +128,7 @@
         connectedCallback() {
           this.x = window.innerWidth / 20;
           this.y = aleatorio(0,Math.floor(window.innerHeight / 1.7));
-          this.innerHTML = "<output id='gusano'> <img src='img/gusano.png' width='139px' height='45px'> </output";
+          this.innerHTML = "<output id='gusano'> <img src='img/gusano.png' width='87px' height='39px'> </output";
           this.style.position ="fixed";
           this.style.fontSize ="2rem";
           this.style.right =`${this.x}px`;
@@ -166,7 +166,7 @@
         connectedCallback() {
           this.x = window.innerWidth / 20;
           this.y = aleatorio(0,Math.floor(window.innerHeight / 1.2));
-          this.innerHTML = "<output id='pezLin'> <img src='img/pezlin.png' id='pezLinImg' width='170px' height='120px'> </output";
+          this.innerHTML = "<output id='pezLin'> <img src='img/pezlin.png' id='pezLinImg' width='190px' height='140px'> </output";
           this.style.position ="fixed";
           this.style.fontSize ="2rem";
           this.style.right =`${this.x}px`;
@@ -182,10 +182,10 @@
             this.style.bottom = `${this.y}px`;
             ceMurio();
             } else {
-              this.y = this.y + window.innerHeight / 1000 * Math.sin(0.02 * this.x);
+              this.y = this.y + window.innerHeight / 1000 * Math.sin(0.06 * this.x);
               this.style.right = `${this.x}px`;
               this.style.bottom = `${this.y}px`;
-              this.x = (this.x + 0.8) %  window.innerWidth;
+              this.x = (this.x + 0.5) %  window.innerWidth;
             }
             if(this.x > 4 * window.innerWidth / 4.050){
               this.x = 4 * window.innerWidth / 4;
@@ -224,7 +224,7 @@
                 this.y = this.y + window.innerHeight / 1000 * Math.sin(0.02 * this.x);
                 this.style.right = `${this.x}px`;
                 this.style.top = `${this.y}px`;
-                this.x = (this.x + 1) %  window.innerWidth;
+                this.x = (this.x + 1.2) %  window.innerWidth;
               }
               if(this.x > 4 * window.innerWidth / 4.050){
                 this.x = 4 * window.innerWidth / 4;
@@ -262,7 +262,7 @@
           this.pezJu = new PezJugador();
           this.gusano = new GusanoComida();
           this.pezLin = new PezLinterna();
-          const personajes = [new PezPiraña(), new PezPiraña(), new GusanoComida(), new PezLinterna()];
+          const personajes = [new PezPiraña(), new PezPiraña(), new PezPiraña(), new GusanoComida(), new PezLinterna()];
           this.append(this.pezJu);
           for (let per of personajes) {
             document.body.append(per);
