@@ -76,6 +76,7 @@
           this.style.left = `${this.x}px`;
           this.style.bottom = `${this.y}px`;
         }
+        /**Este metodo por el momento no se ocupa*/
         muévete() {
           this.y = window.innerHeight / 3 + window.innerHeight / 20 * Math.sin(0.02 * this.x);
           this.style.left = `${this.x}px`;
@@ -257,10 +258,7 @@
             </button>
             <button class="controles" onclick="this.parentElement.avanza();">
                 ▶
-            </button><br>
-            <button class="controles" onclick="this.parentElement.muévete();">
-              Mueve
-            </button>`;
+            </button><br>`;
           this.pezJu = new PezJugador();
           this.gusano = new GusanoComida();
           this.pezLin = new PezLinterna();
@@ -320,7 +318,7 @@
         </p>
         <p class="texto">
           Deberas moverte estrategicamente para evitar ser acechado por los peces enemigos y al mismo tiempo podras alimentarte 
-          de lombrices que apareceran aleatoriamente en la pantalla, al comerte una lombris el marcador del puntaje sumara 1 punto,
+          de lombrices que apareceran aleatoriamente en la pantalla, al comerte una lombriz el marcador del puntaje sumara 1 punto,
           pero si te llegan a tocar los peces enemigos perderas todos tus puntos y el juego terminará.
         </p>
         <p class="texto">
